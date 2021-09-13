@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptResilia</title>
+
+    <link rel="stylesheet" href="reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://kit.fontawesome.com/d9be93bd82.js" crossorigin="anonymous"></script>
+    <script src="functions.js"></script>
+</head>
+<body>
+    <header>
+        <section class="boxHeader">
+            <div class="logo">
+                CRYPTRESILIA
+                <i class="fas fa-key"></i>
+            </div>
+        </section>
+    </header>
+
+    <main class="container">
+        <div class="radius">
+            <label>
+                <input type="radio" name="base64" class="radiusButton" id="base64" onclick="changeRadioBase64()" checked>
+                Base 64
+            </label>
+
+            <label>
+                <input type="radio" name="caesar" class="radiusButton" id="caesar" onclick="changeRadioCaesar()">
+                Cifra de César
+            </label>
+        </div>
+        
+        <textarea name="baseText" id="baseText" cols="30" rows="4" placeholder="Texto"></textarea>
+        
+        <input type="text" class="increment" id="increment" placeholder="Incremento">
+
+        <div class="radius">
+            <label>
+                <input type="radio" name="crypt" class="radiusButton" id="crypt" onclick="changeRadioCrypt()" checked>
+                Crypt
+            </label>
+
+            <label>
+                <input type="radio" name="decrypt" class="radiusButton" id="decrypt" onclick="changeRadioDecrypt()">
+                Decrypt
+            </label>
+        </div>
+
+        <button class="button" onclick="crypt()">Crypt <i class="fas fa-lock"></i></button>
+
+        <textarea name="returnText" id="returnText" cols="30" rows="10" disabled></textarea>
+    </main>
+
+    <footer>
+        <section class="boxFooter">
+            <div class="logo_Footer">
+                CRYPTRESILIA
+                <i class="fas fa-key"></i>
+            </div>
+
+            <div class="copyright_Footer">
+                Copyright &nbsp<i class="far fa-copyright"></i>&nbsp 2021 by Henrique Medeiros. All Right Reserved.
+            </div>
+        </section>
+    </footer>
+</body>
+</html>

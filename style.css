@@ -1,0 +1,134 @@
+body{
+    display: grid;
+    grid-template-areas: 
+    'header'
+    'main'
+    'footer';
+    grid-template-columns: auto;
+    grid-template-rows: 60px auto 60px;
+    height: 100vh;
+    font-family: 'Dosis', sans-serif;
+}
+
+header{
+    grid-area: header;
+    background: #2e2e2d;
+}
+
+.boxHeader{
+    display: grid;
+    height: 100%;
+    grid-template-rows: 33.33% 33.33% 33.33%;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    color: #FFD000;
+    font-weight: 900;
+    font-size: xx-large;
+}
+
+.container{
+    grid-area: main;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    line-height: 2.5em;
+}
+
+.radiusButton{
+    cursor: pointer;
+}
+
+label{
+    margin: 0 1em;
+    cursor: pointer;
+}
+
+#baseText{
+    width: 50%;
+    margin: 10px;
+    border-radius: 10px;
+    border: 0.5px solid gray;
+    background-color: rgb(247, 247, 247);
+}
+
+#baseText:focus{
+    border: none;
+}
+
+.increment{
+    width: 50%;
+    margin: 10px;
+    height: 25px;
+    border-radius: 10px;
+    border: 0.5px solid gray;
+    background-color: rgb(247, 247, 247);
+}
+
+#increment{
+    display: none;
+}
+
+#increment:focus{
+    border: none;
+}
+
+.button{
+    font-family: 'Dosis', sans-serif;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #2e2e2d;
+    background: #FFD000;
+    margin: 10px;
+    width: 50.5%;
+    border-radius: 10px;
+    border: 0.5px solid gray;
+    padding: 8px;
+    cursor: pointer;
+    transition: 0.5s all;
+}
+
+#returnText{
+    margin-top: 2em;
+    width: 50%;
+    border-radius: 10px;
+    cursor: text;
+}
+
+footer{
+    grid-area: footer;
+    background: #2e2e2e;
+}
+
+.boxFooter{
+    display: grid;
+    height: 100%;
+    grid-template-columns: 30% 40% 30%;
+    grid-template-rows: 33.33% 33.33% 33.33%;
+}
+
+.logo_Footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    color: #FFD000;
+    font-weight: 900;
+    font-size: x-large;
+}
+
+.copyright_Footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 2/2;
+    grid-row: 2/3;        
+    color: #FFD000;
+}
