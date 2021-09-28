@@ -5,7 +5,7 @@ body{
     'main'
     'footer';
     grid-template-columns: auto;
-    grid-template-rows: 60px auto 60px;
+    grid-template-rows: 70px auto 70px;
     height: 100vh;
     font-family: 'Dosis', sans-serif;
 }
@@ -35,10 +35,11 @@ header{
 .container{
     grid-area: main;
     display: flex;
+    background-color: #fafafa;
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
-    line-height: 2.5em;
+    line-height: 2.5em; 
 }
 
 .radiusButton{
@@ -51,23 +52,23 @@ label{
 }
 
 #baseText{
-    width: 50%;
+    width: 40%;
     margin: 10px;
     border-radius: 10px;
-    border: 0.5px solid gray;
+    border: 0.1em solid #2e2e2d;
     background-color: rgb(247, 247, 247);
 }
 
 #baseText:focus{
-    border: none;
+    border-width: none;
 }
 
 .increment{
-    width: 50%;
+    width: 40%;
     margin: 10px;
     height: 25px;
     border-radius: 10px;
-    border: 0.5px solid gray;
+    border: 0.1em solid #2e2e2d;
     background-color: rgb(247, 247, 247);
 }
 
@@ -86,7 +87,7 @@ label{
     color: #2e2e2d;
     background: #FFD000;
     margin: 10px;
-    width: 50.5%;
+    width: 40.5%;
     border-radius: 10px;
     border: 0.5px solid gray;
     padding: 8px;
@@ -96,7 +97,9 @@ label{
 
 #returnText{
     margin-top: 2em;
-    width: 50%;
+    width: 40%;
+    border-color: #2e2e2d;
+    border-width: 0.1em;
     border-radius: 10px;
     cursor: text;
 }
@@ -131,4 +134,59 @@ footer{
     grid-column: 2/2;
     grid-row: 2/3;        
     color: #FFD000;
+}
+
+@media (min-width: 500px) and (max-width: 920px) {
+
+    .copyright_Footer{
+        display: block;
+        text-align: center;
+    }
+}
+
+@media (max-width: 500px){
+    body{
+        display: grid;
+        grid-template-areas: 
+        'header'
+        'main'
+        'footer';
+        grid-template-columns: auto;
+        grid-template-rows: 60px auto 100px;
+        height: 100vh;
+        font-family: 'Dosis', sans-serif;
+    }
+
+    #baseText{
+        width: 80%;
+    }
+
+    #increment{
+        width: 80%
+    }
+
+    .button{
+        width: 80.5%;
+    }
+
+    #returnText{
+        width: 80%;
+    }
+    
+    .boxFooter{
+        height: 100%;
+        grid-template-rows: 50% 50%;
+    }
+
+    .logo_Footer{
+        grid-column: 2/2;
+        grid-row: 1/2;
+        text-align: center;
+    }
+
+    .copyright_Footer{
+        display: block;
+        text-align: center;
+        font-size: 0.8em;
+    }
 }
